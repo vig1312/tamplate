@@ -311,7 +311,8 @@ footer {
     .footer-cont-1 {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         flex-direction: column;
         gap: 10px;
 
@@ -368,6 +369,7 @@ footer {
                 border: none;
                 border-radius: 10px;
                 background-color: #1B1B1B;
+                color: white;
             }
 
             button {
@@ -407,6 +409,7 @@ footer {
             
         }
     }
+
 
     nav {
         justify-content: center;
