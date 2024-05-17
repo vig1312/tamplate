@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -154,7 +155,7 @@ section .section-container .section-header-cont {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 50px;
+  gap: 70px;
   position: absolute;
   top: 30%;
   left: 10%;
@@ -170,7 +171,7 @@ section .section-container .section-header-cont h1 {
 section .section-container .section-header-cont .section-1-button {
   padding: 10px 70px 10px 70px;
   border: none;
-  border-radius: 20px;
+  border-radius: 16px;
   background-color: #4859F0;
   font-family: Inter;
   font-size: 1.2rem;
@@ -273,9 +274,10 @@ section .section-container .section-header-cont .section-1-button {
 }
 .section-2 .section-2-container-2 h3 {
   margin-top: 20px;
+  font-family: Inter;
 }
 .section-2 .section-2-container-2 div {
-  padding: 5px 20px 100px 20px;
+  padding: 5px 20px 50px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,6 +325,10 @@ section .section-container .section-header-cont .section-1-button {
 }
 .section-3 .section-3-info-container h1 {
   font-size: 3vw;
+  font-family: Inter;
+}
+.section-3 .section-3-info-container h3 {
+  font-family: Inter;
 }
 .section-3 .section-3-info-container button {
   border: none;
@@ -330,6 +336,8 @@ section .section-container .section-header-cont .section-1-button {
   background-color: #4859F0;
   border-radius: 15px;
   color: white;
+  cursor: pointer;
+  font-family: Inter;
 }
 .section-3 .section-3-container {
   display: -webkit-box;
@@ -346,6 +354,8 @@ section .section-container .section-header-cont .section-1-button {
   top: 1%;
   left: 60%;
   width: 40%;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 .section-3 .section-3-container::after {
   content: "";
@@ -389,6 +399,7 @@ section .section-container .section-header-cont .section-1-button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  font-family: Inter;
 }
 
 footer {
@@ -428,9 +439,9 @@ footer .footer-cont-1 ul, footer .footer-cont-3 ul, footer .footer-cont-2 ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -636,5 +647,10 @@ footer .footer-cont-4 .footer-4-list button {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  section .section-container .section-header-cont h1 {
+    font-size: 2rem;
   }
 }
