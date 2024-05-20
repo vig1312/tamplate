@@ -1,7 +1,7 @@
 @import "mixins";
 @import "variables";
 // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
     margin: 0;
@@ -10,8 +10,31 @@
     text-decoration: none;
     list-style-type: none;
 }
+
+:root {
+    --bg-color: #ffffff;
+    --font-family: Inter;
+    --button-bg: #4859F0;
+    --font-color: #ffffff;
+    --footer-bg: #212121;
+    --section-color:#212121;
+    --section-3-color:black;
+    --black-font: black;
+    --linear-gradient:#ffffff;
+}
+
+html[theme='dark'] {
+    --bg-color:#212121;
+    --section-3-color:white;
+    --section-color:white;
+    --font-color:white;
+    --black-font:white;
+    --footer-bg:#4e4d4e;
+    --linear-gradient:#212121;
+}
 body {
     // background-color: grey;
+    background-color: var(--bg-color);
     padding: 0 24px 0 24px;
 }
 
@@ -46,11 +69,12 @@ header {
         gap: 50px;
 
         h1 {
-            font-family: Inter;
+            font-family: var(--font-family);
             font-size: 2.6rem;
             font-weight: 700;
             line-height: 44.78px;
             text-align: left;
+            color:var(--black-font);
             
         }
 
@@ -76,6 +100,7 @@ header {
                 gap: 10px;
                 text-align: center;
                 @include headerListFont();
+                color: var(--black-font);
                 
             } 
         }
@@ -98,7 +123,8 @@ nav {
     }
     
     a {
-        @include navListFont()
+        @include navListFont();
+        color: var(--black-font);
     }
 
     .nav-phone {
@@ -107,7 +133,7 @@ nav {
         align-items: center;
         gap: 10px;
         a {
-            color: blue;
+            color: var(--button-bg);
         }
     }
 }
@@ -139,13 +165,13 @@ section {
                 padding: 10px 70px 10px 70px;
                 border: none;
                 border-radius: 16px;
-                background-color: #4859F0;
-                font-family: Inter;
+                background-color: var(--button-bg);
+                font-family: var(--font-family);
                 font-size: 1.2rem;
                 font-weight: 700;
                 line-height: 26.63px;
                 text-align: left;
-                color: #ffffff;
+                color: var(--font-color);
                 cursor: pointer;
                 
             }
@@ -165,9 +191,10 @@ section {
             justify-content: center;
             align-items: center;
             gap: 20px;
+            color: var(--black-font);
 
             h1 {
-                font-family: Inter;
+                font-family: var(--font-family);
                 font-size: 1.4rem;
                 font-weight: 700;
                 line-height: 30.26px;
@@ -182,7 +209,7 @@ section {
                 padding: 12px 16px 12px 16px;
 
                 a {
-                    color: white;
+                    color: var(--font-color);
                     font-weight: 800;
                 }
             }
@@ -209,7 +236,8 @@ section {
 
         h3 {
             margin-top: 20px;
-            font-family: Inter;
+            font-family: var(--font-family);
+            color: var(--black-font);
         }
 
         div {
@@ -239,7 +267,7 @@ section {
         gap: 40px;
         align-items: flex-start;
         width: 40%;
-        color: #212121;
+        color: var(--section-color);
         z-index: 2;
         position: absolute;
         top: 25%;
@@ -247,21 +275,24 @@ section {
 
         h1 {
             font-size: 3vw;
-            font-family: Inter;
+            font-family: var(--font-family);
+            color:var(--section-3-color);
+
         }
 
         h3 {
-            font-family: Inter;
+            font-family: var(--font-family);
+            color: var(--section-3-color);
         }
 
         button {
             border: none;
             padding: 1vw 4vw 1vw 4vw;
-            background-color: #4859F0;
+            background-color: var(--button-bg);
             border-radius: 15px;
-            color:white;
+            color:var(--font-color);
             cursor: pointer;
-            font-family: Inter;
+            font-family: var(--font-family);
 
         }
     }
@@ -290,7 +321,7 @@ section {
             left: 0;
             width: 30%;
             height: 75vh;
-            background-image: linear-gradient(to right,white,transparent);
+            background-image: linear-gradient(to right,var(--linear-gradient),transparent);
             z-index: 1;
             // border-radius: 16px;
         }
@@ -311,13 +342,14 @@ section {
             align-items: center;
             flex-direction: column;
             gap: 20px;
-            font-family: Inter;
+            font-family: var(--font-family);
+            color: var(--black-font);
         }
     }
 }
 
 footer {
-    background-color: #212121;
+    background-color: var(--footer-bg);
     display: flex;
     justify-content: space-evenly;
     border-radius: 20px 20px 0 0;
@@ -344,8 +376,8 @@ footer {
         }
 
         a {
-            color: white;
-            font-family: Inter;
+            color: var(--font-color);
+            font-family: var(--font-family);
             font-size: 16px;
             font-weight: 400;
             line-height: 19.36px;
@@ -384,16 +416,16 @@ footer {
                 border: none;
                 border-radius: 10px;
                 background-color: #1B1B1B;
-                color: white;
+                color: var(--font-color);
             }
 
             button {
                 padding: 10px 15px 10px 15px;
-                background-color: #4859F0;
+                background-color: var(--button-bg);
                 border: none;
                 border-radius: 10px;
-                color: white;
-                font-family: Inter;
+                color: var(--font-color);
+                font-family: var(--font-family);
                 font-weight: 400;
                 font-size: 0.8rem;
             }
