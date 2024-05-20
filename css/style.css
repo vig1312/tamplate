@@ -350,6 +350,8 @@ section .section-container .section-header-cont .section-1-button {
       -ms-flex-align: center;
           align-items: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   top: 1%;
   left: 60%;
