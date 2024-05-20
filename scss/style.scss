@@ -521,6 +521,10 @@ footer {
 }
 
 @media only screen and (max-width:640px) {
+    .header-links-navigation {
+        justify-content: center;
+        gap: 20px;
+    }
     nav {
         .navigation-lists {
             width: 100%;
@@ -559,6 +563,9 @@ footer {
 }
 
 @media only screen and (max-width:480px) {
+    .header-links-navigation {
+        display: none;
+    }
     section {
         .section-container {
            .section-header-cont {
