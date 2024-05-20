@@ -43,3 +43,12 @@
     text-align: left;
     color: #FFFFFF;
 }
+
+@mixin headerListNavFont() {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #4859F0;
+}
