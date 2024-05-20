@@ -604,6 +604,11 @@ footer .footer-cont-4 .footer-4-list button {
   header .header-navigation {
     display: none;
   }
+  .header-links-navigation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .section-3 {
     display: -webkit-box;
     display: -ms-flexbox;
